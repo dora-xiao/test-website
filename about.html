@@ -2,9 +2,8 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>The Tactical Chef</title>
+    <title>About - The Tactical Chef</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Catering for small groups in Western Mass">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
@@ -13,17 +12,17 @@
     <!-- Navbar placeholder -->
     <div id="navbar-placeholder"></div>
 
-    <!-- Hero section -->
-    <div class="hero-container hero-full">
-        <img class="hero-background" src="images/home/landing-image.jpg" alt="Full screen landing page image">
+    <!-- Hero section (half height, no chevron) -->
+    <div class="hero-container hero-half">
+        <img class="hero-background" src="images/home/landing-image.jpg" alt="About page hero image">
         <img class="hero-title" src="images/home/landing-title.png" alt="The Tactical Chef Title">
-        <i id="landing-arrow" class="fas fa-chevron-down"></i>
     </div>
 
     <main>
         <section>
-            <h1>Welcome to The Tactical Chef</h1>
-            <p>We specialize in catering for small groups in Western Mass. Let us bring a tactical touch to your next event.</p>
+            <h1>About Us</h1>
+            <p>The Tactical Chef specializes in personalized catering for small groups in Western Massachusetts. We combine tactical precision with culinary creativity to make your events unforgettable.</p>
+            <p>From intimate dinners to casual gatherings, we focus on quality, presentation, and flavor.</p>
         </section>
     </main>
 
@@ -38,16 +37,6 @@
           .then(html => {
               document.getElementById('navbar-placeholder').innerHTML = html;
           });
-
-        // Smooth scroll for home page chevron
-        document.addEventListener('click', function(e) {
-            if(e.target && e.target.id === 'landing-arrow'){
-                window.scrollTo({
-                    top: document.querySelector('main').offsetTop - 60,
-                    behavior: 'smooth'
-                });
-            }
-        });
     </script>
 
 </body>
