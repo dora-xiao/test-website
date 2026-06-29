@@ -18,7 +18,8 @@ body, html {
     align-items: center;
     justify-content: space-between;
     padding: 1rem 2rem;
-    position: fixed;
+    position: absolute;
+    z-index: 2;
     top: 0;
     left: 0;
     width: 100%;
@@ -54,7 +55,7 @@ body, html {
 }
 
 .navbar-menu a:hover {
-    color: #f05a28;
+    color: #f43c64;
 }
 
 .navbar-hamburger {
