@@ -320,9 +320,15 @@ a:hover {
 
 .textbox-text {
     margin-top: 2rem;
+    padding: 1rem;
     font-weight: normal;
     font-size: 1rem;
     font-family: 'Oswald', sans-serif;
+}
+
+.textbox-text > a {
+    color: #A1362A;
+    font-weight: bold;
 }
 
 .imagebox.left {
