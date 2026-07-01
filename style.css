@@ -364,7 +364,7 @@ a:hover {
 .subpage-textbox {
     background: white;
     text-align: center;
-    width: 50vw;
+    width: fit-content;
     margin: auto;
     margin-top: 4rem;
     margin-bottom: 4rem;
@@ -573,6 +573,8 @@ footer {
     font-weight: bold;
     color: #A1362A;
     margin: 0;
+    white-space: nowrap;
+    hyphens: none;
 }
 
 .contact-info > a:hover {
