@@ -11,6 +11,7 @@ body, html {
     width: 100%;
     overflow-x: hidden;
     scroll-behavior: smooth;
+    background-color: #f8f7f4;
 }
 
 /* ----------------- NAVBAR ----------------- */
@@ -186,10 +187,8 @@ body, html {
 
 /* ----------------- MAIN CONTENT ----------------- */
 main {
-    background-color: #FEFCF9;
-    background-image: url("images/home/background.jpg"); 
+    background-color: #f8f7f4;
     min-height: calc(100vh - 60px); /* footer at bottom */
-    padding: 2rem;
 }
 
 h1, h2, h3 {
@@ -212,8 +211,10 @@ a:hover {
     text-decoration: underline;
 }
 
+/* ----------------- INTRO ----------------- */
+
 #intro {
-    background-color: #fffcf7;
+    background-image: url("images/home/background.jpg");
     padding: 5rem;
     padding-left: 20%;
     padding-right: 20%;
@@ -237,7 +238,7 @@ a:hover {
     font-size: clamp(1rem, 1.2vw, 2rem);
     margin: 0px;
     padding: 0px;
-    margin-top: 4rem;
+    margin-top: 3rem;
     margin-bottom: 1rem;
 }
 
@@ -245,8 +246,67 @@ a:hover {
     display: block;
     margin-left: auto;
     margin-right: auto;
-    width: 30vw;
+    width: 5rem;
     margin-bottom: 0.1rem;
+}
+
+/* ------------- FLOATING IMAGES ------------- */
+
+.section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10rem auto;
+    max-width: 1100px;
+    position: relative;
+    min-height: 420px; /* controls overall visual height */
+}
+
+/* IMAGE */
+.imagebox {
+    width: 60%;
+    height: 100%;
+    position: relative;
+    z-index: 1;
+}
+
+.imagebox img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* IMPORTANT: makes image fill height cleanly */
+    display: block;
+}
+
+/* TEXT */
+.textbox {
+    width: 40%;
+    aspect-ratio: 1 / 1;
+    background: white;
+    padding: 2rem;
+    z-index: 2;
+    position: relative;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+
+    display: flex;
+    align-items: center;
+}
+
+.imagebox.left {
+    order: 1;
+}
+
+.imagebox.right {
+    order: 2;
+}
+
+.textbox.right {
+    order: 2;
+    margin-left: -140px;  /* stronger overlap */
+}
+
+.textbox.left {
+    order: 1;
+    margin-right: -140px;
 }
 
 /* ----------------- FOOTER ----------------- */
@@ -269,7 +329,34 @@ footer a:hover {
 
 /* ----------------- RESPONSIVE CONTENT ----------------- */
 @media (max-width: 768px) {
-    main {
-        padding: 2rem;
+    .section {
+        flex-direction: column;
+        min-height: auto;
+        margin: 2rem 2rem;
+    }
+
+    .imagebox,
+    .textbox {
+        width: 100%;
+        height: auto;
+    }
+
+    .imagebox img {
+        height: auto;
+    }
+
+    /* kill overlap on mobile */
+    .textbox {
+        margin: 0 !important;
+        height: auto;
+    }
+
+    /* ensure correct order: image then text */
+    .imagebox {
+        order: 1 !important;
+    }
+
+    .textbox {
+        order: 2 !important;
     }
 }
