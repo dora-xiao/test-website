@@ -356,20 +356,62 @@ a:hover {
 
 /* ----------------- FOOTER ----------------- */
 footer {
-    /* background-color: #901f35; */
     background-color: #A1362A;
-    color: #ffffff;
-    text-align: center;
+    color: #1b1b1b;
     padding: 2rem;
+    font-family: 'Oswald', sans-serif;
 }
 
-footer a {
-    color: #9B223A;
-    text-decoration: none;
+.footer-content {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 3rem;
+    flex-wrap: wrap;
+    font-size: 1rem;
 }
 
-footer a:hover {
-    text-decoration: underline;
+.footer-section {
+    flex: 0 0 250px;
+    text-align: left;
+}
+
+.footer-section h1,
+.footer-section p,
+.footer-section a {
+    color: #f8f7f4;
+    margin: 0;
+    font-weight: 100;
+    font-size: 1rem;
+}
+
+.footer-section h1 {
+    margin-bottom: 1rem;
+    margin-top: 2rem;
+    font-weight: normal;
+    font-size: 1.5rem;
+}
+
+.footer-copyright {
+    margin-top: 2rem;
+    text-align: center;
+    color: #212121;
+    font-size: 0.9rem;
+}
+
+
+/* Mobile */
+@media (max-width: 768px) {
+    .footer-content {
+        flex-direction: column;
+        align-items: center;
+        gap: 1.5rem;
+    }
+
+    .footer-section {
+        width: 100%;
+        max-width: 300px;
+    }
 }
 
 /* ----------------- RESPONSIVE CONTENT ----------------- */
