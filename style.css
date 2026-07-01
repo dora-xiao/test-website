@@ -181,8 +181,15 @@ body.menu-open {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    object-position: top;
     z-index: 1;
+}
+
+#hero-background {
+    object-position: center;
+}
+
+#hero-background-partial {
+    object-position: top;
 }
 
 #hero-title {
