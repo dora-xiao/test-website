@@ -411,6 +411,8 @@ footer {
     .footer-section {
         width: 100%;
         max-width: 300px;
+        height: auto;
+        flex: 0 0 100px;
     }
 }
 
