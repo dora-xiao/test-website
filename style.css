@@ -129,7 +129,7 @@ body, html {
 }
 
 .hero-half {
-    height: 50vh; /* subpages */
+    height: 40vh; /* subpages */
 }
 
 #hero-background {
@@ -141,7 +141,6 @@ body, html {
     object-fit: cover;
     object-position: center;
     z-index: 1;
-    pointer-events: none;
 }
 
 #hero-title {
@@ -149,7 +148,6 @@ body, html {
     z-index: 2;
     width: clamp(250px, 70%, 600px);
     height: auto;
-    pointer-events: none;
 }
 
 #contact-us-btn {
@@ -506,4 +504,15 @@ footer {
 
 #contact-intro{
     margin-bottom: 0px;
+}
+
+.unselectable {
+    pointer-events: none;
+    user-select: none;
+    -webkit-user-drag: none; 
+}
+
+.hoverclick {
+    user-select: none;
+    -webkit-user-drag: none;
 }
