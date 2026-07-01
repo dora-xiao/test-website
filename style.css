@@ -190,7 +190,6 @@ body, html {
 /* ----------------- MAIN CONTENT ----------------- */
 main {
     background-color: #f8f7f4;
-    min-height: calc(100vh - 60px); /* footer at bottom */
 }
 
 h1, h2, h3 {
@@ -215,7 +214,7 @@ a:hover {
 
 /* ----------------- INTRO ----------------- */
 
-#intro {
+.intro {
     background-image: url("images/home/background.jpg");
     padding: 5rem;
     padding-left: 20%;
@@ -491,4 +490,22 @@ footer {
 #about-img {
     width: 50%;
     align-items: right;
+}
+
+.contact-info {
+    font-weight: bold;
+    color: #A1362A;
+    text-align: left;
+    margin: 0;
+}
+
+.contact-info > a {
+    font-weight: bold;
+    color: #A1362A;
+    text-align: left;
+    margin: 0;
+}
+
+#contact-intro{
+    margin-bottom: 0px;
 }
